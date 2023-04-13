@@ -6,6 +6,11 @@ import project_has_gestorRoutes from "./routes/gestorProject.route.js";
 
 const app = express();
 const PORT = process.env.PORT
+
+
+app.get('/', (req,res)=>{
+  res.json({message: "Hello API-PRISMA"})
+})
 //middleware
 app.use(express.json());
 app.use('/gestor',gestorRoutes)
